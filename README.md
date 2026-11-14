@@ -29,6 +29,8 @@ CQA устроен иначе: **`Report.errors` явно перечисляет
 - **ИИ-слой** (опционально, `--ai`): LLM с обязательной верификацией каждой
   гипотезы — `evidence` должен быть в исходнике, иначе REJECTED. Галлюцинации
   не проходят.
+- **SARIF 2.1.0** (`--sarif`) — отчёт для GitHub Code Scanning и любого
+  CI, который понимает SARIF. Рядом с `report.json` и `report.md`.
 
 ## Два режима
 
@@ -50,6 +52,9 @@ CQA устроен иначе: **`Report.errors` явно перечисляет
     # air-gapped / untrusted code
     python cli.py --project /untrusted --safe-mode --offline --fail-on never
 
+    # SARIF 2.1.0 для GitHub Code Scanning / CI
+    python cli.py --project . --fail-on critical --sarif
+
 Exit codes: `0` — успех, `1` — найдены critical (или warning при `--fail-on warning`),
 `2` — internal error.
 
@@ -57,12 +62,12 @@ Exit codes: `0` — успех, `1` — найдены critical (или warning 
 
 | Метрика | Значение |
 |---|---|
-| Тестов | **51**, все ok (`unittest discover`) |
+| Тестов | **59**, все ok (`unittest discover`) |
 | Правил в реестре | 38 |
 | Слоёв верификации | 6 (PBT × 3, fuzz, Kani, Verus) |
 | Runtime-зависимостей | **0** (stdlib) |
 | Schema контракт | v3, защищён тестом |
-| Self-scan CQA | 59 файлов, 0 errors |
+| Self-scan CQA | 60 файлов, 0 errors |
 
 ## Что честно НЕ закрыто
 
@@ -73,6 +78,9 @@ Exit codes: `0` — успех, `1` — найдены critical (или warning 
   детектора циклов.
 - AI-слой прогонялся только с MockClient в тестах. `--ai` требует
   Ollama/OpenAI-compatible endpoint, которого в CI нет.
+- SARIF содержит абсолютные пути (`artifactLocation.uri`). Для внутреннего
+  CI это нормально; для передачи отчёта наружу нужен `--redact-paths` —
+  его пока нет (в roadmap).
 - **Клиента нет.** Инструмент, не SaaS.
 
 ## Что в этой витрине
