@@ -1,0 +1,10 @@
+{
+  "function_too_long":     {"enabled": true, "severity": "warning", "max_lines": 50},
+  "unsafe_without_safety": {"enabled": true, "severity": "critical"},
+  "unwrap_in_prod":        {"enabled": true, "severity": "warning"},
+  "debug_print":           {"enabled": true, "severity": "warning"},
+  "pub_too_wide":          {"enabled": true, "severity": "info"},
+  "magic_number":          {"enabled": true, "severity": "info"},
+  "todo_marker":           {"enabled": true, "severity": "info"},
+  "forbidden_import":      {"enabled": true, "severity": "critical", "forbidden": []}
+}

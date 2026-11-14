@@ -1,0 +1,10 @@
+{
+  "function_too_long":    {"enabled": true, "severity": "warning", "max_lines": 50},
+  "high_complexity":      {"enabled": true, "severity": "warning", "max": 10},
+  "too_many_args":        {"enabled": true, "severity": "info", "max": 7},
+  "bad_naming":           {"enabled": true, "severity": "info"},
+  "dangerous_call":       {"enabled": true, "severity": "critical"},
+  "shell_injection_risk": {"enabled": true, "severity": "critical"},
+  "magic_number":         {"enabled": true, "severity": "info"},
+  "debug_print":          {"enabled": true, "severity": "warning"}
+}
