@@ -1,5 +1,8 @@
 # Code Quality Agent (CQA) — Public Demo
 
+<p align="center"><img src="assets/logo.svg" alt="logo" width="400"></p>
+
+
 ## За 30 секунд
 
 **Что это:** CQA: 38 правил, 0 runtime-зависимостей (stdlib). Компилятор как истина, циклы импортов (Tarjan SCC), 6 слоёв верификации. SARIF 2.1.0.
