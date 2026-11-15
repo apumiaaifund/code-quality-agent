@@ -1,26 +1,40 @@
-![PROVEN](https://img.shields.io/badge/PROVEN-59%20passed-brightgreen)
-
-
 <p align="center"><img src="assets/logo.svg" alt="logo" width="400"></p>
 
-<p align="center">
-  <img src="docs/logo.png" alt="code-quality-agent-demo" width="200"/>
-</p>
+![PROVEN](https://img.shields.io/badge/PROVEN-59%20passed-brightgreen)
 
-<h1 align="center">code-quality-agent-demo</h1>
+# Code Quality Agent
 
-<p align="center">
-  <b>Public demo / archive: APUM AI Fund — воспроизводимая финансовая аналитика</b><br/>
-  APUM AI Fund — воспроизводимая финансовая аналитика
-</p>
+**38 правил, 0 runtime-зависимостей. Компилятор как истина. SARIF 2.1.0.**
 
-## О продукте
-Архивный демо-проект APUM AI Fund. См. основные флагманские продукты в профиле организации.
+---
 
-## Выгоды
-Изучение истории разработки и эволюции архитектуры APUMIA.
+## За 30 секунд
 
+**Что это:** CQA — 38 правил, 0 runtime-зависимостей (stdlib). Компилятор как истина (cargo check / tsc / compile), циклы импортов (Tarjan SCC), SARIF 2.1.0.
 
-## Связанные продукты
-Этот репозиторий является частью экосистемы [APUM AI Fund](https://github.com/apumiaaifund).
-Флагманский продукт: [apumia_credit](https://github.com/apumiaaifund/apumia_credit) (PROVEN 8/8).
+**Кому:** CI-вендоры, внутренние платформы банков/оборонки — OEM-лицензия.
+
+**Почему сейчас:** Semgrep/Sonar не используют компилятор как ground truth. CQA — использует. Меньше ложных срабатываний.
+
+**Что доказано:** 59 passed. SARIF 2.1.0. Report.errors явно перечисляет, что НЕ проверено. apumia prove → PROVEN.
+
+**Чего не доказано (честно):** Нет taint-анализа, dead code, duplication. Не замена Semgrep/Sonar. AI-слой только с MockClient.
+
+---
+
+## Оффер
+
+OEM-лицензия $1–3K (CI-вендор / внутренняя платформа).
+
+**Следующий шаг:** Покажу SARIF + self-scan — 20 минут.
+
+---
+
+## GitHub
+
+- **Private code:** apumiaaifund/code-quality-agent
+- **Public demo:** apumiaaifund/code-quality-agent-demo
+
+## License
+
+MIT
