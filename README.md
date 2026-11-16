@@ -1,3 +1,5 @@
+[![CI Verification](https://github.com/apumiaaifund/code-quality-agent-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/apumiaaifund/code-quality-agent-demo/actions/workflows/ci.yml)
+
 <p align="center"><img src="assets/logo.svg" alt="logo" width="400"></p>
 
 ![PROVEN](https://img.shields.io/badge/PROVEN-59%20passed-brightgreen)
