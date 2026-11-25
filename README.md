@@ -60,3 +60,6 @@ MIT
 > **Контроль архитектуры (`Apumia Blueprint`):** `CLEAN` (`0` циклических зависимостей, контроль сложности McCabe)  
 > **Анализ безопасности (`Bandit / Zero-Trust`):** `0` критических уязвимостей  
 > **Протокол достоверности (`Apumia Hub`):** `_synthetic: false` | `preservation: 100.0%` | `verified: true`
+
+## Commercial Source Code & Private Repo Access
+Instant read-only GitHub repository provisioning via Stripe, Apple Pay, or PayPal: **[Buy APUMIA Code Quality AST Gate ($149) ↗](https://app.lava.top/products/c01021ef-2915-4fdb-bf5a-ec7a7f33d8f7)**
